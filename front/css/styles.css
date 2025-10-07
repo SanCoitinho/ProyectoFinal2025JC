@@ -1,0 +1,88 @@
+
+@import url(./navbar.css);
+
+/* Responsive navbar height and padding */
+@media (max-width: 1200px) {
+	.navbar {
+		padding: 0.8rem 0;
+	}
+	.logo a {
+		font-size: 1.7rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.navbar {
+		padding: 0.7rem 0;
+	}
+	.logo a {
+		font-size: 1.5rem;
+	}
+}
+
+
+@media (max-width: 800x) {
+	.navbar {
+		padding: 0.6rem 0;
+	}
+	.logo a {
+		font-size: 1.2rem;
+	}
+	.navbar-center {
+		gap: 1.2rem;
+	}
+	.user-btn {
+		padding-right: 1rem;
+		margin-left: 1.5rem;
+	}
+	.nav-links {
+		display: none !important;
+	}
+	.hamburger {
+		display: block;
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar {
+		padding: 0.4rem 0;
+	}
+	.logo a {
+		font-size: 1rem;
+	}
+	.navbar-center {
+		gap: 0.5rem;
+	}
+	.user-btn {
+		padding-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+}
+
+@media (max-width: 1300px) {
+	.navbar-center {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1.2rem;
+	}
+	.nav-links {
+		display: none !important;
+	}
+	.search-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	.user-btn {
+		margin-left: 1.5rem;
+		padding-right: 1rem;
+		margin-top: 0;
+	}
+	.hamburger {
+		display: block;
+	}
+}
