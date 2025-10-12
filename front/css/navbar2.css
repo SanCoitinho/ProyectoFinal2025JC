@@ -1,0 +1,31 @@
+.navbar2 {
+  background: #f0f0f0; /* Fondo gris claro */
+  padding: 0.7rem 0;
+  width: 100%;
+}
+
+.navbar2 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar2 ul li {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  background: transparent;
+  color: #23272a;
+  font-family: 'Roboto Condensed', 'Sora', Arial, sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar2 ul li:hover {
+  background: #bdbdbd; /* Gris más oscuro al pasar el cursor */
+  color: #111; /* Letra negra */
+}

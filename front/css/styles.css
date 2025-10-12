@@ -1,9 +1,11 @@
 
 @import url(./navbar.css);
+@import url(./images.css);
+@import url(./navbar2.css);
 
 /* Estilos generales de la navbar */
 /* Solución para evitar que desaparezcan elementos en pantallas medianas */
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .navbar {
     flex-wrap: nowrap;
     min-width: 320px;
@@ -117,45 +119,81 @@
   }
 }
 
-/* Evita que los elementos se oculten en pantallas pequeñas */
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .navbar {
-    flex-wrap: nowrap;
-    min-width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 120px; /* Extiende el fondo hacia abajo */
+    background: #23272a;
+    z-index: 1200;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.7rem 0.7rem 2rem 0.7rem;
   }
+
+  .hamburger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    z-index: 1102;
+    display: block;
+  }
+
   .logo {
-    min-width: 70px;
+    position: absolute;
+    top: 17px;
+    left: 65px; /* Espacio respecto al menú hamburguesa */
+    margin: 0;
+    z-index: 1101;
   }
-  .navbar-center {
-    flex: 1 1 0;
-    min-width: 0;
-    gap: 0.5rem;
-    justify-content: flex-end;
+
+  .user-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    z-index: 1102;
+    display: flex !important;
     align-items: center;
   }
+
+  .navbar-center {
+    position: static;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .search-bar {
-    min-width: 100px;
-    max-width: 140px;
-    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    min-width: 120px;
+    max-width: 180px;
+    flex-direction: row;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 1101;
   }
+
   .search-input {
     min-width: 60px;
     max-width: 100px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
   }
+
   .search-btn {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
     min-width: 28px;
-  }
-  .user-btn {
-    margin-left: 1rem;
-    padding-right: 1rem;
-    display: flex !important;
-    align-items: center;
-    min-width: 32px;
   }
 }
 
