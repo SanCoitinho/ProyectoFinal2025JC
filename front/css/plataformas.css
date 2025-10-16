@@ -1,0 +1,85 @@
+.plataformas-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Apila el h2 arriba y las cajas abajo */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.plataformas-container h2 {
+    margin-bottom: 10px;
+    font: bold 2rem "Sora", sans-serif;
+    text-align: center; /* Centra el texto */
+    width: 100%;  
+}
+
+.img-plat {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;}
+
+.plataformas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.plataformas-container h2 {
+    margin-bottom: 10px;
+    font: bold 2rem "Sora", sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+.plataformas-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.plataformas-list > .plataforma-item:nth-child(3),
+.plataformas-list > .plataforma-item:nth-child(4) {
+    margin-top: 50px; /* Baja las dos imágenes y sus spans de la segunda fila */
+}
+
+.plataforma-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plataforma-item img {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.plataforma-item img:hover {
+    transform: scale(1.07);
+}
+
+.plataforma-item span {
+    margin-top: 10px;
+    font-size: 2rem;
+    font: bold 2rem "Roboto Condensed", sans-serif;
+    color: #23272a;
+    text-align: center;
+}
+
+.subrayado {
+    text-decoration: underline;
+    font-size: 1rem;
+    width: 200px;
+    height: 5px;
+    border-radius: 8px;
+    padding: 0 8px;
+    background-color: #474747;
+}

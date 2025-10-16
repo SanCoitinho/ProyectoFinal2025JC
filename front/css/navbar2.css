@@ -1,21 +1,31 @@
 .navbar2 {
-  background: #f0f0f0; /* Fondo gris claro */
-  padding: 0.7rem 0;
-  width: 100%;
+  background: #f0f0f0;
+  padding: 0;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .navbar2 ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  gap: 0.3rem; /* Menos espacio entre links */
   list-style: none;
   margin: 0;
-  padding: 0;
+  z-index: 100; /* Lower z-index for navbar2 */
 }
 
 .navbar2 ul li {
-  padding: 0.5rem 1.2rem;
+  position: relative;
   border-radius: 6px;
   background: transparent;
   color: #23272a;
@@ -23,9 +33,39 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  text-align: center;
+  padding: 0.6rem 1.2rem; /* Padding arriba y abajo para buen alto */
+  display: block;
+  border-right: 1px solid #ccc;
+}
+
+.navbar2 ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  transition: color 0.2s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }
 
 .navbar2 ul li:hover {
-  background: #bdbdbd; /* Gris más oscuro al pasar el cursor */
-  color: #111; /* Letra negra */
+  background: #bdbdbd; /* Ocupa todo el alto del li */
+}
+
+.navbar2 ul li:hover::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 0px;
+  height: 3px;
+  background: #6366f1;
+  border-radius: 2px;
+}
+
+.navbar2 ul li:last-child {
+  border-right: none;
 }

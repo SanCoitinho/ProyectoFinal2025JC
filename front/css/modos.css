@@ -1,0 +1,59 @@
+/* Modos de Juego - usa los mismos estilos que clasificación por edades */
+.modos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.modos-container h2 {
+    margin-bottom: 10px;
+    font: bold 2rem "Sora", sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+.modos-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    width: 100%;
+    justify-items: stretch;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.modos-list .clasificacion-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #23272a, #696666, #2e4b61);
+    color: #fff;
+    padding: 30px 40px 50px 18px;
+    border-radius: 10px;
+    font-family: 'Sora', 'Roboto Condensed', sans-serif;
+    font-size: 1.4rem;
+    min-width: 270px;
+    min-height: 120px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-align: left;
+}
+
+.modos-list .clasificacion-arrow {
+    position: absolute;
+    left: 18px;
+    bottom: 16px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.2s;
+}
+.modos-list .clasificacion-arrow:hover {
+    transform: translateY(-3px) scale(1.1);
+}
